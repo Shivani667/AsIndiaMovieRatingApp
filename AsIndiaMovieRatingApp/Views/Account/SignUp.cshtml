@@ -1,0 +1,43 @@
+﻿
+@{
+    Layout = null;
+}
+@model AsIndiaMovieRatingApp.Models.Account
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>SignUp</title>
+</head>
+<body>
+    <h3>SignUp Page</h3>
+    @using (Html.BeginForm("SignUp" , "Account" , FormMethod.Post))
+    {
+<table cellpadding="2" cellspacing="2">
+    <tr>
+        <td>Id</td>
+        <td>@Html.TextBoxFor(model => model.Id)</td>
+    </tr>
+    <tr>
+        <td>Username</td>
+        <td>@Html.TextBoxFor(model => model.Username)</td>
+    </tr>
+    <tr>
+        <td>Password</td>
+        <td>@Html.PasswordFor(model => model.Password)</td>
+    </tr>
+    <tr>
+        <td>Full Name</td>
+        <td>@Html.TextBoxFor(model => model.FullName)</td>
+    </tr>
+    <tr>
+        <td>&nbsp;</td>
+        <td>
+            <input type="submit" value="SignUp" />
+        </td>
+    </tr>
+</table>
+    }
+</body>
+</html>
